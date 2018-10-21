@@ -1,0 +1,8 @@
+2018-10-19 18:12:20.656  INFO 13324 --- [main] com.ch.demo.DemoTest                     : Starting DemoTest on DESKTOP-Q41TSN4 with PID 13324 (started by Admin in D:\ideaWork\solrJD)
+2018-10-19 18:12:20.666  INFO 13324 --- [main] com.ch.demo.DemoTest                     : No active profile set, falling back to default profiles: default
+2018-10-19 18:12:26.793  WARN 13324 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-10-19 18:12:31.408  INFO 13324 --- [main] com.ch.demo.DemoTest                     : Started DemoTest in 12.021 seconds (JVM running for 15.638)
+2018-10-19 18:12:35.737  INFO 13324 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-10-19 18:12:36.991  INFO 13324 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-10-19 18:12:46.941  INFO 13324 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-10-19 18:12:46.959  INFO 13324 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

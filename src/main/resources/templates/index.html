@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+    <body>
+    <div id="bigDiv">
+        <form class="layui-form" method="post" action="/goods/search">
+            <input type="text" name="gname" required lay-verify="required" placeholder="请输入标题"
+                   th:value="${gname}"
+                   autocomplete="off" class="layui-input">
+            <button class="layui-btn" lay-submit lay-filter="formDemo" style="margin: auto;">搜索</button>
+        </form>
+        <ul>
+            <li class="goodsLi" th:each="goods : ${goodsVOList}">
+                <a th:href="'https://item.jd.com/'+${goods.gcode}+'.html'" target="_blank">
+                    <img th:src="'getImage?url='+${goods.imageUrl}+'/'+${goods.imageName}">
+                </a>
+                <!--<span th:if="${goods.price} != null" th:text="${#strings.substring(goods.price,0,6)}" ></span>-->
+                <span th:if="${goods.priceStr} != null" th:text="'￥'+${goods.priceStr}" class="priceSpan" ></span>
+                <span th:if="${goods.gname} != null" th:text="${goods.gname}" class="gnameSpan" ></span>
+                <span th:if="${goods.storeName} != null" th:text="${goods.storeName}" class="storeNameSpan" ></span>
+            </li>
+        </ul>
+    </div>
+    </body>
+</html>
